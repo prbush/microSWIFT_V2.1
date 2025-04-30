@@ -18,17 +18,14 @@
 
 // For testing and debugging with a very short sample window
 //#define DEBUGGING_FAST_CYCLE
-
 // If a 1 min sleep window is desired
 //#define SHORT_SLEEP
-
 /*
  * Configuration options
  */
 
 // Define if the old type V3D RockBlock modem is used
 //#define ROCK_BLOCK_V3D
-
 // For debugging, redefine sample window parameters to be faster
 #ifdef DEBUGGING_FAST_CYCLE
 
@@ -75,7 +72,7 @@
 #define TEMPERATURE_ENABLED false
 
 // If we are saving raw data to flash
-#define FLASH_STORAGE_ENABLED false
+#define FLASH_STORAGE_ENABLED true
 
 // If true, will clear out flash memory on initial power up or hard reset.
 #define CLEAR_USER_FLASH false
@@ -86,16 +83,16 @@
 // Whether or not to use the Independent watchdog
 #define WATCHDOG_ENABLED true
 
-typedef struct microSWIFT_configuration{
-	uint32_t samples_per_window;
-	uint32_t iridium_max_transmit_time;
-	uint32_t gnss_max_acquisition_wait_time;
-	uint32_t gnss_sampling_rate;
-	uint32_t total_ct_samples;
-	uint32_t windows_per_hour;
-	uint32_t reset_reason;
-	bool 	 gnss_high_performance_mode;
+typedef struct microSWIFT_configuration
+{
+  uint32_t samples_per_window;
+  uint32_t iridium_max_transmit_time;
+  uint32_t gnss_max_acquisition_wait_time;
+  uint32_t gnss_sampling_rate;
+  uint32_t total_ct_samples;
+  uint32_t windows_per_hour;
+  uint32_t reset_reason;
+  bool gnss_high_performance_mode;
 } microSWIFT_configuration;
-
 
 #endif /* INC_CONFIGURATION_H_ */
