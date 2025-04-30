@@ -39,7 +39,7 @@
 #define TOTAL_SAMPLES_PER_WINDOW 4096
 
 // The max time in MINUTES to try to get an Iridium message off
-#define IRIDIUM_MAX_TRANSMIT_TIME 6
+#define IRIDIUM_MAX_TRANSMIT_TIME 20
 
 // The max time in MINUTES without good data from GNSS before commanding to sleep
 // !! Must be greater than 0
@@ -49,7 +49,7 @@
 
 // Are we doing 1 or two sample windows per hour
 // !! Must be a number such that SAMPLE_WINDOWS_PER_HOUR % 60 == 0
-#define SAMPLE_WINDOWS_PER_HOUR 2
+#define SAMPLE_WINDOWS_PER_HOUR 1
 #endif // DEBUGGING_FAST_CYCLE
 
 // Sampling rate in Hz for the GNSS sensor
@@ -72,7 +72,7 @@
 #define TEMPERATURE_ENABLED false
 
 // If we are saving raw data to flash
-#define FLASH_STORAGE_ENABLED true
+#define FLASH_STORAGE_ENABLED false
 
 // If true, will clear out flash memory on initial power up or hard reset.
 #define CLEAR_USER_FLASH false
